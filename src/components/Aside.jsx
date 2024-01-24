@@ -10,7 +10,7 @@ export default function Aside( {onSelect} ) {
       <aside id="aside">
         <h1 className="title-aside">Project</h1>
         <div className="project-box">
-          <TodoList />
+          <TodoList onSelectProject={onSelect}/>
         </div>
 
         <button id="add-project" onClick={handelBtnClick}>

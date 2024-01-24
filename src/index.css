@@ -1,19 +1,19 @@
 *,
 *::after,
-*::before{
+*::before {
   margin: 0;
   padding: 0;
   /* outline: 1px red solid; */
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
 
-html , body{
+html,
+body {
   height: 100%;
 }
 
-
-#header{
+#header {
   text-align: center;
   font-size: 40px;
   padding: 20px;
@@ -21,32 +21,64 @@ html , body{
   height: 10vh;
 }
 
-#main{
+#main {
   display: flex;
-  height: 87vh;
+  min-height: 87vh;
 }
 
-#main-page{
+#main-page {
   margin: 25px 25px 25px;
   font-size: 24px;
   flex: 5;
 }
 
-#aside{
+#main-page .title{
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#main-page .task{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 5px 0px 5px;
+}
+
+#main-page .task:hover{
+  background-color: rgb(235, 235, 235);
+}
+
+#main-page .close-btn{
+  background: none;
+  display: flex;
+  border-style: none;
+  border-radius: 50%;
+}
+
+#main-page .close-btn:hover{
+  border-style: dashed;
+  cursor: pointer;
+}
+
+
+#aside {
   display: flex;
   flex-direction: column;
   background-color: #cad2c5;
   padding: 0px 25px 0px 25px;
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
 }
 
-.title-aside{
+.title-aside {
   font-size: 36px;
   margin: 15px 0px 15px;
 }
 
-#todo-list{
+#todo-list {
   margin: 15px 0px 0px;
   font-size: 20px;
   /* list-style: none; */
@@ -59,15 +91,14 @@ html , body{
   font-weight: 500;
 }
 
-#todo-list:active{
+#todo-list:active {
   background-color: white;
 }
 
-#todo-list:hover{
+#todo-list:hover {
   background-color: white;
   cursor: pointer;
 }
-
 
 #add-project{
   font-size: 24px;
@@ -82,20 +113,109 @@ html , body{
   align-items: center;
 }
 
-#add-project:hover{
+#add-project:hover {
   cursor: pointer;
   background-color: white;
 }
 
-#footer{
+#footer {
   align-items: center;
   text-align: center;
   background-color: #52796f;
   font-weight: 500;
-  height: 3vh;
+  min-height: 3vh;
 }
 
-#popup{
-  position: absolute;
-  font-size: 150px;
+#popup {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup h1 {
+  text-align: center;
+}
+
+.box-popup {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0px 25px;
+}
+
+#popup label {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+
+#popup input {
+  border-style: solid;
+  border-radius: 8px;
+  padding-left: 5px;
+  font-size: 24px;
+}
+
+.box-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#popup button {
+  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.submit:hover{
+  background-color: rgb(102, 187, 102);
+  cursor: pointer;
+}
+
+.cancel:hover{
+  background-color: rgb(241, 125, 125);
+  cursor: pointer;
+}
+
+#add-task{
+  background: none;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+#add-task:hover{
+  background-color: rgb(235, 235, 235);
+  cursor: pointer;
+}
+
+#ido{
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

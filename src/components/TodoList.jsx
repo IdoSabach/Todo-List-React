@@ -1,19 +1,22 @@
-let project = [
-  {title :'Today' , id: 0 , todo: []},
-  {title :'This Week' , id: 1 , todo: []},
-  {title :'This Mount' , id: 2 , todo: []}
-]
+import { projects } from "./PopupCreateProject";
 
 export default function TodoList() {
-  function handelClick(text){
-    console.log(text)
+  function handelClick(text, id) {
+    console.log(text);
+    console.log(id);
   }
   return (
-    <div >
+    <div>
       <ul>
-          {project.map((todo) =>(
-            <button key={todo.id} id="todo-list" onClick={() => handelClick(todo.title)}>{todo.title}</button>
-          ))}
+        {projects.map((todo) => (
+          <button
+            key={todo.id}
+            id="todo-list"
+            onClick={handelClick}
+          >
+            {todo.title}
+          </button>
+        ))}
       </ul>
     </div>
   );
