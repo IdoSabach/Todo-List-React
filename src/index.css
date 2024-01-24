@@ -1,0 +1,101 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  /* outline: 1px red solid; */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+html , body{
+  height: 100%;
+}
+
+
+#header{
+  text-align: center;
+  font-size: 40px;
+  padding: 20px;
+  background-color: #52796f;
+  height: 10vh;
+}
+
+#main{
+  display: flex;
+  height: 87vh;
+}
+
+#main-page{
+  margin: 25px 25px 25px;
+  font-size: 24px;
+  flex: 5;
+}
+
+#aside{
+  display: flex;
+  flex-direction: column;
+  background-color: #cad2c5;
+  padding: 0px 25px 0px 25px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.title-aside{
+  font-size: 36px;
+  margin: 15px 0px 15px;
+}
+
+#todo-list{
+  margin: 15px 0px 0px;
+  font-size: 20px;
+  /* list-style: none; */
+  background: none;
+  border-style: none;
+  border-radius: 12px;
+  padding: 8px;
+  width: 100%;
+  text-align: left;
+  font-weight: 500;
+}
+
+#todo-list:active{
+  background-color: white;
+}
+
+#todo-list:hover{
+  background-color: white;
+  cursor: pointer;
+}
+
+
+#add-project{
+  font-size: 24px;
+  margin: 25px 0px 10px;
+  background: none;
+  border-style: none;
+  border-radius: 8px;
+  padding: 4px;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+#add-project:hover{
+  cursor: pointer;
+  background-color: white;
+}
+
+#footer{
+  align-items: center;
+  text-align: center;
+  background-color: #52796f;
+  font-weight: 500;
+  height: 3vh;
+}
+
+#popup{
+  position: absolute;
+  font-size: 150px;
+}
