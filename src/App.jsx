@@ -5,6 +5,7 @@ import PopupCreateProject from './components/PopupCreateProject';
 import PopupCreateTask from './components/PopupCreateTask';
 import "./App.css";
 import { useState } from 'react';
+import { projects } from "./components/PopupCreateProject";
 
 function App() {
   const [openProject , setOpenProject] = useState(false)
@@ -31,6 +32,7 @@ function App() {
   function handelCloseTask(){
     setOpenTask(false)
   }
+
   return (
     <>
       <header id="header">Welcome to your Todo List!</header>

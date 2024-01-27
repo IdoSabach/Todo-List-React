@@ -5,12 +5,16 @@ export default function Aside( {onSelect} ) {
     onSelect()
   }
 
+  function print(id){
+    console.log(id)
+  }
+
   return (
     <>
       <aside id="aside">
         <h1 className="title-aside">Project</h1>
         <div className="project-box">
-          <TodoList onSelectProject={onSelect}/>
+          <TodoList onClickProject={handelBtnClick} selectedId={(id) => print(id)}/>
         </div>
 
         <button id="add-project" onClick={handelBtnClick}>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { projects } from "./PopupCreateProject";
 
-export default function PopupCreateTask({ open, onSelectBtn, projectId }) {
+export default function PopupCreateTask({ open, onSelectBtn }) {
   const [taskDescription, setTaskDescription] = useState("");
 
   const handleInputChange = (e) => {
